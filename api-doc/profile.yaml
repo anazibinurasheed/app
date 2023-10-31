@@ -130,7 +130,7 @@ response:
 
 Search for user.
 
-get:/user/search{query}
+get:/profile/search{query}
 
 
 response:
