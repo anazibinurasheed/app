@@ -145,3 +145,75 @@ response:
 }
 
 
+
+    Create a Group: 
+    
+     Create a new group.
+
+     POST /api/groups
+    
+    List Groups:
+      
+      Retrieve a list of all groups.
+
+     GET /api/groups
+
+    Group Details:
+     
+     GET /api/groups/{group_id}
+     
+      Retrieve details about a specific group.
+    
+    Join a Group: 
+    
+    Allow a user to join a group.
+
+     POST /api/groups/{group_id}/join 
+    
+    Leave a Group
+    
+    Allow a user to leave a group.
+
+     POST /api/groups/{group_id}/leave 
+    
+    Add Group Members:
+    
+    Add members to a group.
+
+     POST /api/groups/{group_id}/add-members 
+    
+    Remove Group Members:
+
+    Remove members from a group.
+
+     POST /api/groups/{group_id}/remove-members 
+    
+    Create Group Chat:
+    
+    Create a new chat within a group.
+
+     POST /api/groups/{group_id}/chats 
+    
+    List Group Chats:
+
+    Retrieve a list of all chats within a group.
+    
+      GET /api/groups/{group_id}/chats 
+    
+    Group Chat Details:
+    
+     Retrieve details about a specific chat within a group.
+
+      GET /api/groups/{group_id}/chats/{chat_id}
+    
+    Send Group Message:
+    
+    Send a message in a group chat.
+
+      POST /api/groups/{group_id}/chats/{chat_id}/messages 
+    
+    List Group Messages:
+     
+     Retrieve a list of messages in a group.
+
+      GET /api/groups/{group_id}/chats/{chat_id}/messages
