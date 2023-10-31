@@ -1,0 +1,147 @@
+<-WEBSOCKET->
+
+Create-Group:
+
+A user can create a group.
+
+post:/group/create
+
+request:
+{
+    image   
+    group_name
+    description
+
+}
+response:
+ status:201
+
+
+
+
+Delete-Group:
+
+Created user can delete group.
+
+delete:/group/delete/{group_id}
+
+response:
+status:200
+
+
+
+
+Get-Chat-Types:
+
+Will display available chat types from the server.
+
+get:/group/chat-types
+
+response:
+status:200
+{
+    chat_type_id
+    chat_type_name
+}
+
+
+
+
+Create-Chat-Section:
+
+Create a chat section by provided chat_type_id.
+
+post:group/create-chat
+request:
+{
+    chat_name
+    chat_type_id
+}
+
+response:
+status:200
+
+
+
+
+Get-Groups:
+
+Fetch all the groups details and display to the user.
+
+get:/group
+status:200
+response: 
+{
+    [
+    group_id 
+    group_name
+    group_img_url
+    ],
+}
+
+
+
+
+Get-Chat:
+
+Fetch the available chat sections in a group.
+
+get:/group/{group_id}
+
+response:
+status:200
+[{
+    chat_id
+    chat_name
+
+}]
+
+
+
+
+Get-Messages:
+
+Will display recent messages in that particular chat section.
+
+ws:/group/{group_id}/{chat_id}
+
+response:
+status:200
+[{
+    user_id
+    user_name
+    user_img_url 
+    message
+    msg_type
+    media[
+        {
+            media_id
+            msg_id
+            media_url
+            type 
+        }
+    ] 
+}]
+
+
+Sent-Group-Message:
+
+
+User can sent messages to chat sections.
+ws:/group/{group_id}/{chat_id}
+
+request:
+{
+    image
+}
+{
+    message
+    msg_type
+}
+
+response:
+{
+ status:201
+}
+
+

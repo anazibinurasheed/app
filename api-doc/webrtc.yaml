@@ -1,0 +1,10 @@
+
+Join a voice session.
+POST /voice/sessions/{sessionID}/join
+
+Out from a voice session.
+POST /voice/sessions/{sessionID}/out
+
+Fetch voice session information.
+GET /voice/sessions/{sessionID}
+

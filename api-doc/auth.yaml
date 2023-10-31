@@ -1,0 +1,62 @@
+<-AUTHENTICATION->
+
+
+
+Sign-Up:
+
+User can register an account
+
+post:/register
+
+request:
+{
+    username
+    email
+    password
+    confirm_password
+}
+
+response:
+status:200
+
+
+
+Google-Auth:
+
+User can register using google auth
+
+get:/auth/google
+
+response:
+status:200
+
+
+
+Github-Auth:
+
+User can register using github auth
+
+get:/auth/github
+
+response:
+status:200
+
+
+
+Login:
+
+User can login using credentials
+
+post:/login
+request:
+{
+    email
+    password 
+}
+
+response:
+status:200
+
+
+
+

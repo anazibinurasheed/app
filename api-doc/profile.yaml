@@ -1,0 +1,129 @@
+<-Profile->
+
+
+Add-Image:
+
+User can add Profile picture.
+
+post:/profile/add-image
+
+request:
+{
+    image
+}
+
+response:
+status:201
+
+
+Remove-Image:
+
+User can remove profile picture.
+
+delete:/profile/remove-image
+
+response:
+status:200
+
+
+
+Add-Bg-Image:
+
+User can add background image.
+
+post:/profile/bg-image
+
+request:
+{
+    bg_image
+}
+
+response:
+status:201
+
+
+
+Remove-Bg-Image:
+
+User can remove background image.
+
+delete:/profile/remove-bg-image
+
+response:
+status:200
+
+
+
+
+Add-Note:
+
+User can add a note, that will highlight in the users profile.
+
+post:/profile/add-note
+
+request:    
+{
+    note
+}
+
+response:
+status:201
+
+
+Remove-Note:
+
+User can remove note.
+
+post:/profile/remove-note
+
+response:
+status:201
+
+
+
+Register-Mentor:
+
+Peoples who is willing to help others can register as mentor.
+Mentors will be highlighted in the application.
+Users can easily identify the mentors.
+
+Mentor should need to provide required information to become a mentor.
+
+post:/mentor/register
+
+request:
+{
+    position
+}
+
+response:
+status:201
+
+
+
+Out-Mentor:
+
+Remove mentor identity.
+
+delete:/mentor/remove
+
+response:
+status:200
+
+
+
+
+Search for mentor.
+
+get:/mentor/search{query}
+
+
+response:
+[
+    {
+        user_id
+        profile_img_url
+        username
+        note
+    }
+]

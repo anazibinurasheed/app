@@ -1,0 +1,147 @@
+<-POSTS->
+
+
+Create:
+
+User can create a post.
+
+post:/post/create
+
+request:
+{
+    image
+    title
+    description
+}
+
+response:
+status:201
+
+
+
+
+Update:
+
+User can update his post.
+
+post:/post/update/{postID}
+
+request:
+{
+    image
+    title
+    description
+}
+
+response:
+status:201
+
+
+
+
+Delete:
+
+User can delete his post.
+
+delete:/post/delete/{postID}
+
+response:
+status:200
+
+
+
+
+Get-Post:
+
+Displays a post.
+
+get:/post/{postID}
+
+response:
+status:200
+[{
+    post_id
+    image_url
+    title
+    description
+}]
+
+
+
+
+Comment:
+
+Post comment on a particular post.
+
+post:/post/comment/{postID}
+
+request:
+{
+comment
+}
+
+response:
+status:201
+
+
+
+
+Get-Comments:
+
+Retrieve all the comments of the post.
+
+get:/post/comment/{postID}
+
+response:
+status:200
+{
+    [
+        comment_id
+        user_id
+        comment
+        created_at
+    ],
+}
+
+
+
+
+Update-Comments:
+
+Retrieve all the comments of the post.
+
+put:/update/comment/{postID}
+
+request:
+{
+    comment
+}
+
+response:
+status:200
+
+
+
+
+Like:
+
+Like a post.
+
+Post:/post/like/{postID}
+
+response:
+status:201
+
+
+
+
+Un-Like:
+
+Unlike a post.
+
+Post:/post/unlike/{postID}
+
+response:
+status:200
+
+
