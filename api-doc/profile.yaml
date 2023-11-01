@@ -127,3 +127,18 @@ response:
         note
     }
 ]
+
+Search for user.
+
+get:/profile/search{query}
+
+
+response:
+[
+    {
+        user_id
+        profile_img_url
+        username
+        note
+    }
+]
